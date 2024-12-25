@@ -7,7 +7,8 @@ const Hero = () => {
    <div className="">
 
     {/*Main Hero Section*/}
-      <div className="h-auto md:h[600px] lg:h-[900px] w-full flex flex-wrap justify-center items-center bg-[#FBEBB5] px-5 py-5 md:p-7">
+      <div className="h-auto md:h[600px] lg:h-[900px] w-full flex flex-wrap justify-center items-center
+       bg-[#FBEBB5] px-5 py-5 md:p-7">
         <div className="flex items-center h-auto md:w-1/2 justify-end">
           <div className="text-left md:px-12 lg:px-1">
             <h1 className="text-[#000000] text-[64px]">

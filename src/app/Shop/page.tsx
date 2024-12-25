@@ -3,6 +3,10 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { PiCirclesFourFill } from "react-icons/pi";
 import Delivery from "../Components/Delivery";
 import Image from "next/image";
+import Allpagesmainsection from "../Components/Allpagesmainsection";
+
+
+
 
 const Shop = () => {
   return (
@@ -10,26 +14,7 @@ const Shop = () => {
       
 
       {/* Shop Main page */}
-      <div className="relative w-full h-[316px] mb-14">
-        <div className="absolute inset-0 bg-[url('/Assets/Image_13.jpg')] bg-cover bg-center opacity-50"></div>
-        {/* Content on Top */}
-        <div className="relative w-full h-full flex flex-col justify-center items-center">
-          <Image
-            src="/Assets/Shop_logo.png"
-            width={77}
-            height={77}
-            alt="shop logo"
-            className="w-[77px] h-[77px]"
-          />
-          <p className="font-medium text-[48px] leading-[72px]">Shop</p>
-          <div className="flex items-center justify-center space-x-2">
-            <p className="font-medium">Home</p>
-            <MdOutlineKeyboardArrowRight className="text-xl" />
-
-            <p>Shop</p>
-          </div>
-        </div>
-      </div>
+      <Allpagesmainsection logo="Shop" logoDescription="Shop"/>
 
    {/* filter and results */}
 <div className=" w-full flex flex-col md:flex-row flex-wrap gap-2 md:justify-between items-center px-4 py-2 md:px-20 h-auto md:h-[100px] bg-[#FAF4F4]">
@@ -162,8 +147,7 @@ const Shop = () => {
         </div>
 
 
-
-
+     
 
 
 

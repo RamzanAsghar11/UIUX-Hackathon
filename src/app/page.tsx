@@ -1,8 +1,9 @@
 
 import Hero from "./Components/Hero"
-import Picksforyou from "./Components/Picksforyou"
+
 import Blogs from "./Components/Blogs"
 import Instagram from "./Components/Instagram"
+import Toppicks from "./Picksforyou/page"
 
 
 
@@ -12,7 +13,7 @@ const page = () => {
     <div>
       
       <Hero/>
-      <Picksforyou/>
+      <Toppicks/>
       <Blogs/>
       <Instagram/>
       

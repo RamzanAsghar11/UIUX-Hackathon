@@ -7,7 +7,7 @@ import { Roboto, Poppins } from "next/font/google";
 
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "700"], // Specify the weights you need
+  weight: ["400", "700"], 
   variable: "--font-roboto",
 });
 

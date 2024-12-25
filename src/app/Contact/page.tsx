@@ -5,28 +5,14 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import Image from "next/image";
+import Allpagesmainsection from "../Components/Allpagesmainsection";
 
 const Contact = () => {
   return (
     <div className='w-full'>
      
       {/* Main contact page */}
-      <div className="relative w-full h-[316px] mb-14">
-       
-        <div className="absolute inset-0 bg-[url('/Assets/Image_13.jpg')] bg-cover bg-center opacity-50"></div>
-        
-        {/* Content on Top */}
-        <div className="relative w-full h-full flex flex-col justify-center items-center">
-        <Image src="/Assets/Shop_logo.png" alt="shop logo" width={77}
-            height={77} className="w-[77px] h-[77px]" />
-          <p className="font-medium text-[48px] leading-[72px]">Contact</p>
-          <div className="flex items-center justify-center space-x-2"> 
-            <p className="font-medium">Home</p>
-            <MdOutlineKeyboardArrowRight className="text-xl" /> 
-            <p>contact</p>
-          </div>
-        </div>
-      </div>
+      <Allpagesmainsection logo="Contact" logoDescription="Contact"/>
       <h1 className='font-semibold text-4xl leading-tight text-center mb-8 px-5'>Get In Touch With Us</h1>
       <p className='text-[#9F9F9F] text-center font-normal leading-6 px-2'>For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. <br /> Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
 
