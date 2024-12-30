@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Image from 'next/image'
 
 const Description = () => {
@@ -20,7 +20,7 @@ const Description = () => {
       </div>
       </div>
 
-      {/* 2 Sofa images */}
+      {/* 2 Sofas */}
 
       <div className='w-full h-auto md:h-[348px] flex flex-col md:flex-row gap-6 py-6 md:py-10 '>
         <div className='flex justify-center items-center bg-[#FFF9E5] '>

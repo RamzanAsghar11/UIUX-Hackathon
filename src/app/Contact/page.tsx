@@ -6,6 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import Image from "next/image";
 import Allpagesmainsection from "../Components/Allpagesmainsection";
+import Delivery from "../Components/Delivery";
 
 const Contact = () => {
   return (
@@ -13,17 +14,19 @@ const Contact = () => {
      
       {/* Main contact page */}
       <Allpagesmainsection logo="Contact" logoDescription="Contact"/>
+      {/*Heading and description*/}
       <h1 className='font-semibold text-4xl leading-tight text-center mb-8 px-5'>Get In Touch With Us</h1>
       <p className='text-[#9F9F9F] text-center font-normal leading-6 px-2'>For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. <br /> Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
 
 
- {/* center content */}
+ {/* Main content */}
 
       <div className='px-9 lg:px-[60px] xl:px-[250px]  flex flex-col md:flex-row  justify-center'>
 
         {/* Left side details */}
         <div className='w-full md:w-1/2 flex flex-col gap-20 px-8 lg:px-28 my-6 py-20 '>
           <div>
+            {/* Address */}
             <div className='flex gap-7 items-center'>
             <span><FaLocationDot /></span>
             <p className='font-medium text-2xl leading-9'>Address </p>
@@ -31,6 +34,7 @@ const Contact = () => {
             <p className='leading-6 px-10' >236 5th SE Avenue, New York NY10000, United States</p>
           </div>
           <div>
+             {/* Phone */}
             <div className='flex gap-7 items-center'>
             <span><FaPhoneAlt /></span>
             <p className='font-medium text-2xl leading-9'> Phone </p>
@@ -39,6 +43,7 @@ const Contact = () => {
             <p className='leading-6 px-10'> Hotline: +(84) 456-6789 </p>
           </div>
           <div >
+             {/*Working time */}
             <div className='flex gap-7 items-center'>
             <span><FaClock /></span>
             <p className='font-medium text-2xl leading-9'> Working Time </p>
@@ -52,6 +57,8 @@ const Contact = () => {
 
         <div className="container w-full md:w-1/2 my-6 py-20">
       <form className="flex flex-col gap-10">
+         {/* Your name*/}
+
         <div>
           <label htmlFor="name" className="block text-gray-700 font-bold mb-5">
             Your Name
@@ -63,6 +70,7 @@ const Contact = () => {
             className=" h-auto md:h-[75px] border rounded-2xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
+         {/*Email Address */}
         <div>
           <label htmlFor="email" className="block text-gray-700 font-bold mb-5">
             Email address
@@ -74,6 +82,7 @@ const Contact = () => {
             className=" h-auto md:h-[75px] border rounded-2xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
+         {/* Subject */}
         <div>
           <label htmlFor="name" className="block text-gray-700 font-bold mb-5">
             Subject
@@ -85,6 +94,7 @@ const Contact = () => {
             className=" h-auto md:h-[75px] border rounded-2xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
+         {/* Message */}
         <div>
           <label htmlFor="message" className="block text-gray-700 font-bold mb-5">
             Message
@@ -96,6 +106,7 @@ const Contact = () => {
           />
         </div> 
         <div >
+           {/* Button */}
         <button
           type="submit"
           className="  text-center hover:bg-blue-700 text-black  py-2 px-14 rounded-2xl focus:outline-none focus-shadow-outline border border-black"
@@ -107,23 +118,11 @@ const Contact = () => {
     </div>
       </div>
        
-    {/* Details*/}
-      <div className="w-full h-auto md:h-[300px] bg-[#FAF4F4] flex flex-col md:flex-row justify-center gap-6 items-center">
-          <div className="w-[376px] flex flex-col text-center p-9 ">
-            <p className="font-medium text-[32px] leading-snug">Free Delivery</p>
-            <p className="text-[#9F9F9F]">For all oders over $50, consectetur adipim scing elit.</p>
-            
-          </div>
-          <div className="w-[376px] flex flex-col text-center p-9">
-          <p className="font-medium text-[32px] leading-snug">90 Days Return</p>
-          <p className="text-[#9F9F9F]">If goods have problems, consectetur adipim scing elit.</p>
-          </div>
-          <div className="w-[376px] flex flex-col text-center p-9">
-          <p className="font-medium text-[32px] leading-snug">Secure Payment</p>
-          <p className="text-[#9F9F9F]">100% secure payment, consectetur adipim scing elit.</p>
-          </div>
-        </div>
+    {/*import Delivery from "../Components/Delivery";*/}
       
+      <div>
+       <Delivery/> 
+      </div>
       
 
     </div>

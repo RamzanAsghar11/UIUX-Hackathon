@@ -1,30 +1,40 @@
-"use client"
+
 import { FaChevronRight } from "react-icons/fa6";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
-import CartSidebar from "./Cartsidebar";
-import { useState } from "react";
+import Description from './Description'
+import Picksforyou from '../Components/Picksforyou'
 
 
 
 
 
 
-const Mainproduct = () => {
+interface MainProductProps {
+  title: string;
+  imageSrc: string;
+  price: number;
+  description: string;
+}
+
+
+
+
+const Mainproduct: React.FC<MainProductProps>  = ({
+  title,
+  imageSrc,
+  price,
+  description,
+}) => {
 
   
-  const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const openCart = () => {
-    setIsCartOpen(true);
-  };
 
-  const closeCart = () => {
-    setIsCartOpen(false);
-  };
+
+  
   return (
     <div className="w-full px-2 md:px-10 ">
       {/* top section */}
@@ -39,15 +49,15 @@ const Mainproduct = () => {
             <FaChevronRight />
           </span>{" "}
         </div>
-        <div className="font-medium pl-6 ">Asgaard Sofa</div>
+        <div className="font-medium pl-6 ">{title}</div>
       </div>
 
       {/* main section */}
 
       <div className="w-full flex flex-col md:flex-row h-auto  justify-center md:gap-5 lg:gap-20 px-4 lg:px-10 border-[#9F9F9F] border-b-2">
-        {/* Left section main side image and main imgae */}
+        {/* Left section sideimages and main image */}
         <div className="w-full md:w-1/2 flex h-[500px] gap-5 py-4">
-          {/* left images */}
+          {/* left side product images */}
           <div className="flex flex-col w-[77px] h-[416px] gap-6">
             <div className="w-[77px] h-[115px] bg-[#FFF9E5] rounded-2xl flex justify-center items-center">
               <Image
@@ -82,10 +92,10 @@ const Mainproduct = () => {
               />
             </div>
           </div>
-          {/* Right main image */}
+          {/*Main Product image */}
           <div className="bg-[#FFF9E5] h-full flex justify-center items-center w-[80%] ">
             <Image
-              src="/Assets/Image 8.png"
+              src={imageSrc}
               width={481}
               height={391}
               alt="Main product"
@@ -95,10 +105,12 @@ const Mainproduct = () => {
 
         {/* Right section product details*/}
         <div className="h-full w-full md:w-1/2 py-4">
-          <p className="font-normal text-[42px] mb-3 ">Asgaard Sofa</p>
-          <p className="text-[#9F9F9F] font-medium">Rs. 250,000.00</p>
-
+        {/* title and price */}
+          <p className="font-normal text-[42px] mb-3 ">{title}</p>
+          <p className="text-[#9F9F9F] font-medium">Rs. {price}</p>
+          {/* Reviews*/}
           <div className="flex items-center  ">
+            
             <div className="flex gap-2 text-[#FFDA5B] pr-4 py-2 border-r-2 border-[#9F9F9F] ">
               <span>
                 <FaStar />
@@ -120,10 +132,9 @@ const Mainproduct = () => {
               5 Customer Review
             </div>
           </div>
+          {/* Product Description */}
           <p className=" w-[424px] pr-5 my-5">
-            Setting the bar as one of the loudest speakers in its class, the
-            Kilburn is a compact, stout-hearted hero with a well-balanced audio
-            which boasts a clear midrange and extended highs for a sound.
+           {description}
           </p>
           <p className="text-[#9F9F9F] mt-3">Size</p>
 
@@ -145,6 +156,7 @@ const Mainproduct = () => {
             <div className="w-[30px] h-[30px] bg-black rounded-full"></div>
             <div className="w-[30px] h-[30px] bg-[#CDBA7B] rounded-full"></div>
           </div>
+          {/* Add to cart */}
 
           <div className="flex gap-5">
             <div className="flex justify-center items-center border-2 border-[#9F9F9F] rounded-lg py-4 px-3 gap-7 ">
@@ -153,12 +165,14 @@ const Mainproduct = () => {
               <span>+</span>
             </div>
             <button className=" text-black py-4 px-10 flex justify-center items-center border-black rounded-2xl border-2"
-            onClick={openCart} >
+             >
               Add to Cart
             </button>
           </div>
 
           <hr className=" mt-20 w-full border-t-2 border-gray-300" />
+
+          {/* SKU, Category,tags,share */}
 
           <div className="flex  gap-6 text-[#9F9F9F] my-10">
             <div className="w-[75px] flex flex-col gap-5">
@@ -169,10 +183,10 @@ const Mainproduct = () => {
             </div>
 
             <div className="flex flex-col gap-5">
-              <p>:</p>
-              <p>:</p>
-              <p>:</p>
-              <p>:</p>
+              <span>:</span>
+              <span>:</span>
+              <span>:</span>
+              <span>:</span>
             </div>
 
             <div className="flex flex-col gap-5">
@@ -194,9 +208,19 @@ const Mainproduct = () => {
           </div>
         </div>
       </div>
-      <div>
-      <CartSidebar isOpen={isCartOpen} closeCart={closeCart} />
+
+
+        <div>
+{/* import Description from './Description'*/}
+        
+      <Description/>
+      
+      {/*import Picksforyou from '../Shop/Products/Picksforyou'*/}
+     
+      <Picksforyou title="Related Products" showDescription={false} />
       </div>
+      
+     
 
     </div>
   );
