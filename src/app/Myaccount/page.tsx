@@ -1,4 +1,4 @@
-
+import React from 'react'
 import Allpagesmainsection from '../Components/Allpagesmainsection'
 import Delivery from '../Components/Delivery';
 
@@ -14,9 +14,7 @@ const Myaccount = () => {
         <div className="w-full md:w-1/2 px-8 lg:px-10 2xl:px-24 py-6">
           <h2 className="text-4xl font-semibold my-6">Log In</h2>
           <form className="space-y-10">
-             {/* Username or email address*/}
             <div >
-             
               <label className="block mb-1 my-5">
                 Username or email address
               </label>
@@ -25,7 +23,6 @@ const Myaccount = () => {
                 className="w-full h-[75px] border border-[#9F9F9F] p-2 rounded mt-5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            {/* Password*/}
             <div>
               <label className="block mb-1 my-5">Password</label>
               <input
@@ -33,15 +30,12 @@ const Myaccount = () => {
                 className="w-full h-[75px] border border-[#9F9F9F] p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 mt-5"
               />
             </div>
-            {/* Remember me*/}
             <div className="flex items-center">
               <input type="checkbox" className="mr-4 text-[#9F9F9F] w-[27px] h-[30px] " id="rememberMe" />
               <label htmlFor="rememberMe" className="">
                 Remember me
               </label>
             </div>
-
-            {/* Login/Lost Your Password*/}
             <div className="flex xl:items-center flex-col xl:flex-row md:justify-between">
               <button
                 type="submit"
@@ -56,11 +50,10 @@ const Myaccount = () => {
           </form>
         </div>
 
-        {/*Right side Register Form */}
+        {/* Register Form */}
         <div className="w-full md:w-1/2 px-8 lg:px-10 2xl:px-24 py-6">
           <h2 className="text-4xl font-semibold my-6">Register</h2>
           <form className="space-y-10">
-            {/*Email address*/}
             <div>
               <label className="block mb-1 my-5">Email address</label>
               <input
@@ -68,7 +61,6 @@ const Myaccount = () => {
                 className="w-full h-[75px] border border-[#9F9F9F] p-2 rounded mt-5 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            {/*Email Details*/}
             <p className=" my-5 text-sm">
               A link to set a new password will be sent to your email  address.
             </p>
@@ -78,8 +70,6 @@ const Myaccount = () => {
               other purposes described in our  
               <span className="font-bold"> privacy policy</span>.
             </p>
-             {/*Button*/}
-
             <button
                 type="submit"
                 className=" py-4 px-20 text-xl border border-[#9F9F9F] rounded-xl hover:bg-blue-600"
@@ -89,7 +79,6 @@ const Myaccount = () => {
           </form>
         </div>
       </div>
-       {/*import Delivery from '../Components/Delivery';*/}
 
       <div>
           <Delivery/>

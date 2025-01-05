@@ -22,12 +22,9 @@ function About() {
                 Follow our store on Instagram
               </p>
               <div className="flex justify-center my-[10px]">
-                {/* Follow us button */}
-                <Link href="/Contact">
                 <button className="w-[255px] h-[65px] text-[20px] bg-[#fff] rounded-[50px] text-black shadow-lg">
-                Follow Us
+                <Link href="/Contact">Follow Us</Link>
                 </button>
-                </Link>
               </div>
             </div>
           </div>

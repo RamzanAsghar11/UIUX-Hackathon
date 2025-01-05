@@ -12,7 +12,6 @@ const Cart = () => {
         {/* Cart Table Section */}
 
         <table className="w-full md:w-full xl:w-[70%] ">
-          {/* Header Section */}
           <thead className="bg-[#FFF9E5] w-full">
             <tr className=" md:grid md:grid-cols-6 sm:grid-flow-col items-center py-3 lg:text-xl ">
               <th className="p-2  "></th>
@@ -24,19 +23,19 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody className="w-full ">
-            {/* Poduct Details */}
             <tr className=" md:grid md:grid-cols-6 sm:grid-flow-col items-center py-3 my-10">
+              {/* Product Image and Name */}
               <td className=" ">
-                {/* Product Image */}
                 <div className=" w-20 h-20 md:w-24 md:h-24 p-3 bg-[#FBEBB5] rounded flex items-center justify-center">
-                  <img
+                  <Image
+                  width={55}
+                  height={55}
                     src="/Assets/Image 8.png"
                     alt="Product"
                     className="w-full h-full object-cover"
                   />
                 </div>
               </td>
-              {/* Product name*/}
               <td className="text-[#9F9F9F]">Asgaard Sofa </td>
 
               {/* Price */}
@@ -79,23 +78,18 @@ const Cart = () => {
           </div>
           <div className="flex justify-between w-full my-8">
             <span className="font-medium">Total</span>
-            <span className="text-[#B88E2F] font-medium text-xl">
-              Rs. 250,000.00
-            </span>
+            <span className="text-[#B88E2F] font-medium text-xl">Rs. 250,000.00</span>
           </div>
           <div className="w-full flex justify-center xl:px-10">
-            {/* Checkout button */}
-            <button className="w-full border-2 border-black py-4 rounded-xl text-xl">
-              Check Out
-            </button>
+          <button className="w-full border-2 border-black py-4 rounded-xl text-xl">
+            Check Out
+          </button>
           </div>
         </div>
       </div>
-
-      {/*import Delivery from "../Components/Delivery"; */}
       <div>
-        <Delivery />
-      </div>
+          <Delivery/>
+        </div>
     </div>
   );
 };

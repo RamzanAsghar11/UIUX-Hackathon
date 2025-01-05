@@ -8,9 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-      screens: {
-        '1440': '1440px', // Custom breakpoint for 1440px width
-      },
       fontFamily: {
         sans: ["var(--font-poppins)", "var(--font-roboto)", "sans-serif"],
       },

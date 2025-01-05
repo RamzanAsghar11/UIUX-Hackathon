@@ -3,9 +3,7 @@ import Hero from "./Components/Hero"
 
 import Blogs from "./Components/Blogs"
 import Instagram from "./Components/Instagram"
-import Picksforyou from "./Components/Picksforyou"
-import Asgaardsofa from "./Components/Asgaardsofa"
-
+import Toppicks from "./Picksforyou/page"
 
 
 
@@ -15,8 +13,7 @@ const page = () => {
     <div>
       
       <Hero/>
-      <Picksforyou/>
-      <Asgaardsofa/>
+      <Toppicks/>
       <Blogs/>
       <Instagram/>
       
